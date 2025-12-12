@@ -21,8 +21,12 @@
                 extend: {
                     colors: {
                         yoinn: {
-                            navy: '#0D1B2A',
-                            lime: '#BEF264',
+                            primary: '#fb923c',       /* Naranja Suave */
+                            'primary-hover': '#f97316', /* Naranja Intenso */
+                            secondary: '#4f46e5',     /* Índigo Profundo */
+                            'secondary-hover': '#4338ca', /* Índigo Oscuro */
+                            light: '#f5f5f4',         /* Gris Piedra Claro */
+                            dark: '#292524',          /* Gris Piedra Oscuro */
                         }
                     },
                     animation: {
@@ -45,7 +49,8 @@
     <style>
         body { font-family: 'Figtree', sans-serif; }
         .gradient-text {
-            background: linear-gradient(to right, #BEF264, #ffffff);
+            /* Gradiente usando el Naranja Suave y Blanco */
+            background: linear-gradient(to right, #fb923c, #ffffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -54,22 +59,24 @@
 <body class="bg-white text-slate-900">
 
     <!-- SECCIÓN 1: PORTADA -->
-    <header class="relative bg-yoinn-navy text-white min-h-[90vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <header class="relative bg-yoinn-dark text-white min-h-[90vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
         <!-- Decoración de fondo -->
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-yoinn-lime blur-[100px]"></div>
-            <div class="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-yoinn-lime blur-[120px]"></div>
+            <!-- Círculos decorativos con el color Primario (Naranja) -->
+            <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-yoinn-primary blur-[100px]"></div>
+            <!-- Círculo decorativo con el color Secundario (Índigo) para contraste -->
+            <div class="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-yoinn-secondary blur-[120px]"></div>
         </div>
 
         <nav class="absolute top-0 w-full p-6 flex justify-between items-center z-10 max-w-7xl mx-auto">
-            <span class="text-3xl font-black tracking-tighter text-yoinn-lime">YOINN</span>
-            <a href="mailto:contacto@yoinn.cl" class="text-sm font-bold hover:text-yoinn-lime transition-colors">
+            <span class="text-3xl font-black tracking-tighter text-yoinn-primary">YOINN</span>
+            <a href="mailto:miguel.morera.ampuero@gmail.com" class="text-sm font-bold hover:text-yoinn-primary transition-colors">
                 Contacto
             </a>
         </nav>
 
         <div class="z-10 max-w-4xl mx-auto space-y-6 animate-fade-in-up">
-            <h2 class="text-yoinn-lime font-bold tracking-widest uppercase text-sm md:text-base mb-2">
+            <h2 class="text-yoinn-primary font-bold tracking-widest uppercase text-sm md:text-base mb-2">
                 Social Discovery & Experiences
             </h2>
             <h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tight">
@@ -80,14 +87,14 @@
             </p>
             
             <div class="mt-12 flex flex-col items-center">
-                <div class="w-16 h-1 bg-yoinn-lime mb-4"></div>
+                <div class="w-16 h-1 bg-yoinn-primary mb-4"></div>
                 <p class="text-sm font-medium text-slate-400">Miguel Moreira – Founder</p>
             </div>
         </div>
     </header>
 
     <!-- SECCIÓN 2 & 3: PROBLEMA Y OPORTUNIDAD -->
-    <section class="py-20 px-6 bg-slate-50">
+    <section class="py-20 px-6 bg-yoinn-light">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
             
             <!-- El Problema -->
@@ -96,8 +103,8 @@
                     <i data-lucide="x-circle" class="w-4 h-4"></i>
                     <span>El Problema</span>
                 </div>
-                <h3 class="text-4xl font-bold text-yoinn-navy">Conectados, pero más solos que nunca.</h3>
-                <ul class="space-y-4 text-lg text-slate-600">
+                <h3 class="text-4xl font-bold text-yoinn-dark">Conectados, pero más solos que nunca.</h3>
+                <ul class="space-y-4 text-lg text-slate-700">
                     <li class="flex items-start">
                         <span class="mr-3 mt-1 text-red-500">•</span>
                         Las redes actuales no generan encuentros reales.
@@ -115,22 +122,23 @@
 
             <!-- La Oportunidad -->
             <div class="space-y-6">
-                <div class="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                <!-- Usamos el índigo para representar oportunidad/negocio -->
+                <div class="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                     <i data-lucide="trending-up" class="w-4 h-4"></i>
                     <span>La Oportunidad</span>
                 </div>
-                <h3 class="text-4xl font-bold text-yoinn-navy">El auge del Social Discovery.</h3>
-                <ul class="space-y-4 text-lg text-slate-600">
+                <h3 class="text-4xl font-bold text-yoinn-dark">El auge del Social Discovery.</h3>
+                <ul class="space-y-4 text-lg text-slate-700">
                     <li class="flex items-start">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 mt-1 text-yoinn-navy"></i>
+                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 mt-1 text-yoinn-secondary"></i>
                         Personas de 18 a 60 buscan actividades fuera de lo digital.
                     </li>
                     <li class="flex items-start">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 mt-1 text-yoinn-navy"></i>
+                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 mt-1 text-yoinn-secondary"></i>
                         No existe una plataforma simple para panoramas entre desconocidos.
                     </li>
                     <li class="flex items-start">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 mt-1 text-yoinn-navy"></i>
+                        <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 mt-1 text-yoinn-secondary"></i>
                         Mercado amplio: vida social, deporte, cultura, ocio.
                     </li>
                 </ul>
@@ -140,9 +148,9 @@
     </section>
 
     <!-- SECCIÓN 4 & 5: SOLUCIÓN -->
-    <section class="py-24 px-6 bg-yoinn-navy text-white">
+    <section class="py-24 px-6 bg-yoinn-dark text-white">
         <div class="max-w-6xl mx-auto text-center mb-16">
-            <h2 class="text-yoinn-lime font-bold tracking-widest uppercase mb-4">La Solución</h2>
+            <h2 class="text-yoinn-primary font-bold tracking-widest uppercase mb-4">La Solución</h2>
             <h3 class="text-5xl font-black mb-6">YOINN</h3>
             <p class="text-xl text-slate-300 max-w-3xl mx-auto">
                 Una app donde cualquier persona puede crear y unirse a panoramas reales en su ciudad, en segundos.
@@ -152,32 +160,32 @@
 
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Step 1 -->
-            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-lime transition-colors text-center group">
-                <div class="bg-yoinn-lime text-yoinn-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-primary transition-colors text-center group">
+                <div class="bg-yoinn-primary text-yoinn-dark w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="map-pin" class="w-8 h-8"></i>
                 </div>
                 <h4 class="text-xl font-bold mb-2">Explora</h4>
                 <p class="text-slate-400">Panoramas reales cerca de ti.</p>
             </div>
             <!-- Step 2 -->
-            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-lime transition-colors text-center group">
-                <div class="bg-yoinn-lime text-yoinn-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-primary transition-colors text-center group">
+                <div class="bg-yoinn-primary text-yoinn-dark w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="calendar" class="w-8 h-8"></i>
                 </div>
                 <h4 class="text-xl font-bold mb-2">Crea</h4>
                 <p class="text-slate-400">Publica tu plan en segundos.</p>
             </div>
             <!-- Step 3 -->
-            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-lime transition-colors text-center group">
-                <div class="bg-yoinn-lime text-yoinn-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-primary transition-colors text-center group">
+                <div class="bg-yoinn-primary text-yoinn-dark w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="users" class="w-8 h-8"></i>
                 </div>
                 <h4 class="text-xl font-bold mb-2">Únete</h4>
                 <p class="text-slate-400">Envía una solicitud para participar.</p>
             </div>
             <!-- Step 4 -->
-            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-lime transition-colors text-center group">
-                <div class="bg-yoinn-lime text-yoinn-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-yoinn-primary transition-colors text-center group">
+                <div class="bg-yoinn-primary text-yoinn-dark w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                     <i data-lucide="message-circle" class="w-8 h-8"></i>
                 </div>
                 <h4 class="text-xl font-bold mb-2">Conecta</h4>
@@ -187,40 +195,41 @@
     </section>
 
     <!-- SECCIÓN 6 & 7: VALOR Y DIFERENCIACIÓN -->
-    <section class="py-20 px-6">
+    <section class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="mb-16">
-                <h3 class="text-3xl font-bold text-yoinn-navy mb-8 text-center">Propuesta de Valor vs Competencia</h3>
+                <h3 class="text-3xl font-bold text-yoinn-dark mb-8 text-center">Propuesta de Valor vs Competencia</h3>
                 <div class="grid md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="p-6 bg-yoinn-light rounded-xl border border-slate-200">
                         <h4 class="font-bold text-slate-500 mb-2">Apps de Citas</h4>
                         <p class="text-sm text-slate-600">Buscan 'match' romántico, no panoramas grupales reales.</p>
                     </div>
-                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="p-6 bg-yoinn-light rounded-xl border border-slate-200">
                         <h4 class="font-bold text-slate-500 mb-2">Redes Sociales (IG/TikTok)</h4>
                         <p class="text-sm text-slate-600">Consumo de contenido, no permiten coordinar con desconocidos fácilmente.</p>
                     </div>
-                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="p-6 bg-yoinn-light rounded-xl border border-slate-200">
                         <h4 class="font-bold text-slate-500 mb-2">Timeleft / Meetup</h4>
                         <p class="text-sm text-slate-600">Experiencias curadas o grupos rígidos, no creadas espontáneamente por usuarios.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-yoinn-lime p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-lg">
+            <!-- Caja de Diferenciación: Usamos el color Secundario (Índigo) para destacar -->
+            <div class="bg-yoinn-secondary p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-xl text-white">
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between">
                     <div class="mb-6 md:mb-0">
-                        <h3 class="text-3xl md:text-4xl font-black text-yoinn-navy mb-2">Diferenciación YOINN</h3>
-                        <p class="text-yoinn-navy font-medium text-lg max-w-xl">
-                            La única plataforma centrada 100% en la <span class="underline decoration-4 decoration-white">creación social de panoramas</span> por cualquier persona. Sin fricción.
+                        <h3 class="text-3xl md:text-4xl font-black mb-2">Diferenciación YOINN</h3>
+                        <p class="font-medium text-lg max-w-xl text-slate-100">
+                            La única plataforma centrada 100% en la <span class="underline decoration-4 decoration-yoinn-primary">creación social de panoramas</span> por cualquier persona. Sin fricción.
                         </p>
                     </div>
                     <!-- Fake Avatars -->
                     <div class="flex -space-x-4">
-                        <div class="w-12 h-12 rounded-full bg-yoinn-navy border-2 border-yoinn-lime flex items-center justify-center text-white text-xs font-bold">U1</div>
-                        <div class="w-12 h-12 rounded-full bg-yoinn-navy border-2 border-yoinn-lime flex items-center justify-center text-white text-xs font-bold">U2</div>
-                        <div class="w-12 h-12 rounded-full bg-yoinn-navy border-2 border-yoinn-lime flex items-center justify-center text-white text-xs font-bold">U3</div>
-                        <div class="w-12 h-12 rounded-full bg-white border-2 border-yoinn-lime flex items-center justify-center text-yoinn-navy font-bold text-xs">+1k</div>
+                        <div class="w-12 h-12 rounded-full bg-yoinn-dark border-2 border-yoinn-primary flex items-center justify-center text-white text-xs font-bold">U1</div>
+                        <div class="w-12 h-12 rounded-full bg-yoinn-dark border-2 border-yoinn-primary flex items-center justify-center text-white text-xs font-bold">U2</div>
+                        <div class="w-12 h-12 rounded-full bg-yoinn-dark border-2 border-yoinn-primary flex items-center justify-center text-white text-xs font-bold">U3</div>
+                        <div class="w-12 h-12 rounded-full bg-white border-2 border-yoinn-primary flex items-center justify-center text-yoinn-dark font-bold text-xs">+1k</div>
                     </div>
                 </div>
             </div>
@@ -228,15 +237,15 @@
     </section>
 
     <!-- SECCIÓN 9 & 11: MERCADO Y MODELO -->
-    <section class="py-20 px-6 bg-slate-50">
+    <section class="py-20 px-6 bg-yoinn-light">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
            
            <!-- Mercado -->
            <div>
-              <h3 class="text-2xl font-bold text-yoinn-navy mb-6 flex items-center">
-                <i data-lucide="target" class="mr-3 text-yoinn-navy"></i> Mercado Objetivo
+              <h3 class="text-2xl font-bold text-yoinn-dark mb-6 flex items-center">
+                <i data-lucide="target" class="mr-3 text-yoinn-primary"></i> Mercado Objetivo
               </h3>
-              <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+              <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                 <p class="text-lg text-slate-700 mb-4">Personas de <strong>18 a 60 años</strong> con ganas de hacer algo y conocer gente.</p>
                 <div class="flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium">Jóvenes Adultos</span>
@@ -250,25 +259,25 @@
 
            <!-- Modelo -->
            <div>
-              <h3 class="text-2xl font-bold text-yoinn-navy mb-6 flex items-center">
-                <i data-lucide="trending-up" class="mr-3 text-yoinn-navy"></i> Modelo de Negocio
+              <h3 class="text-2xl font-bold text-yoinn-dark mb-6 flex items-center">
+                <i data-lucide="trending-up" class="mr-3 text-yoinn-primary"></i> Modelo de Negocio
               </h3>
-              <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+              <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                 <ul class="space-y-3">
                   <li class="flex items-center text-slate-700">
-                    <div class="w-2 h-2 bg-yoinn-lime rounded-full mr-3"></div>
+                    <div class="w-2 h-2 bg-yoinn-primary rounded-full mr-3"></div>
                     Comisión por eventos pagados (Ticketing).
                   </li>
                   <li class="flex items-center text-slate-700">
-                    <div class="w-2 h-2 bg-yoinn-lime rounded-full mr-3"></div>
+                    <div class="w-2 h-2 bg-yoinn-primary rounded-full mr-3"></div>
                     Suscripciones para anfitriones "Power Host".
                   </li>
                   <li class="flex items-center text-slate-700">
-                    <div class="w-2 h-2 bg-yoinn-lime rounded-full mr-3"></div>
+                    <div class="w-2 h-2 bg-yoinn-primary rounded-full mr-3"></div>
                     Promoción destacada de panoramas.
                   </li>
                   <li class="flex items-center text-slate-700">
-                    <div class="w-2 h-2 bg-yoinn-lime rounded-full mr-3"></div>
+                    <div class="w-2 h-2 bg-yoinn-primary rounded-full mr-3"></div>
                     Alianzas B2B con marcas y locales.
                   </li>
                 </ul>
@@ -279,16 +288,16 @@
     </section>
 
     <!-- SECCIÓN 10 & 12: ROADMAP -->
-    <section class="py-20 px-6">
+    <section class="py-20 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
-          <h3 class="text-3xl font-bold text-yoinn-navy text-center mb-12">Roadmap & Estado Actual</h3>
+          <h3 class="text-3xl font-bold text-yoinn-dark text-center mb-12">Roadmap & Estado Actual</h3>
           
-          <div class="relative border-l-4 border-yoinn-navy ml-6 md:ml-12 space-y-12">
+          <div class="relative border-l-4 border-yoinn-dark ml-6 md:ml-12 space-y-12">
             
             <!-- Estado Actual -->
             <div class="relative pl-8">
-              <div class="absolute -left-[14px] top-0 w-6 h-6 bg-yoinn-lime border-4 border-yoinn-navy rounded-full"></div>
-              <h4 class="text-xl font-bold text-yoinn-navy">Estado Actual</h4>
+              <div class="absolute -left-[14px] top-0 w-6 h-6 bg-yoinn-primary border-4 border-yoinn-dark rounded-full"></div>
+              <h4 class="text-xl font-bold text-yoinn-dark">Estado Actual</h4>
               <p class="text-slate-600 mt-2">Prototipo funcional en WebApp (React/Firebase). Primeras validaciones de usuario en curso.</p>
             </div>
 
@@ -325,22 +334,30 @@
     </section>
 
     <!-- SECCIÓN 14: CIERRE -->
-    <footer class="py-24 px-6 bg-yoinn-navy text-center text-white">
+    <footer class="py-24 px-6 bg-yoinn-dark text-center text-white">
         <div class="max-w-3xl mx-auto">
-            <i data-lucide="rocket" class="w-16 h-16 text-yoinn-lime mx-auto mb-8"></i>
+            <i data-lucide="rocket" class="w-16 h-16 text-yoinn-primary mx-auto mb-8"></i>
             <h2 class="text-4xl md:text-5xl font-black mb-8">Únete a nosotros.</h2>
             <p class="text-xl text-slate-300 mb-10">
                 Buscamos socios estratégicos e inversión para escalar el producto, iniciar marketing agresivo y construir la app móvil nativa.
             </p>
             
-            <div class="inline-block p-1 bg-gradient-to-r from-[#BEF264] to-white rounded-full">
-                <a href="mailto:contacto@yoinn.cl" class="block px-8 py-4 bg-yoinn-navy hover:bg-[#1a2e44] text-white rounded-full font-bold text-lg transition-colors">
-                    Hablemos: contacto@yoinn.cl
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <!-- Botón Email -->
+                <a href="mailto:miguel.morera.ampuero@gmail.com" class="inline-flex items-center justify-center px-8 py-4 bg-yoinn-primary hover:bg-yoinn-primary-hover text-white rounded-full font-bold text-lg transition-colors">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                    Email
+                </a>
+                
+                <!-- Botón WhatsApp -->
+                <a href="https://wa.me/56956595730" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full font-bold text-lg transition-colors">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                    WhatsApp
                 </a>
             </div>
 
             <div class="mt-16 pt-8 border-t border-white/10 text-slate-500 text-sm">
-                <p class="font-bold text-yoinn-lime mb-2">YOINN</p>
+                <p class="font-bold text-yoinn-primary mb-2">YOINN</p>
                 <p>Haz que pase.</p>
                 <p class="mt-4">Miguel Moreira – Founder</p>
             </div>
