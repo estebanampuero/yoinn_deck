@@ -1,0 +1,305 @@
+import React from 'react';
+import { 
+  Users, 
+  MapPin, 
+  Calendar, 
+  MessageCircle, 
+  TrendingUp, 
+  Target, 
+  ShieldCheck, 
+  Rocket,
+  ChevronRight,
+  CheckCircle2,
+  XCircle
+} from 'lucide-react';
+
+const DeckLandingPage: React.FC = () => {
+  return (
+    <div className="min-h-screen font-sans text-slate-900 bg-white">
+      {/* --- SECCIÓN 1: PORTADA --- */}
+      <header className="relative bg-[#0D1B2A] text-white min-h-[90vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+        {/* Elemento decorativo de fondo */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+           <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#BEF264] blur-[100px]"></div>
+           <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#BEF264] blur-[120px]"></div>
+        </div>
+
+        <nav className="absolute top-0 w-full p-6 flex justify-between items-center z-10">
+          <span className="text-3xl font-extrabold tracking-tighter text-[#BEF264]">YOINN</span>
+          <a href="mailto:contacto@yoinn.cl" className="text-sm font-semibold hover:text-[#BEF264] transition-colors">
+            Contacto
+          </a>
+        </nav>
+
+        <div className="z-10 max-w-4xl mx-auto space-y-6 animate-fade-in-up">
+          <h2 className="text-[#BEF264] font-bold tracking-widest uppercase text-sm md:text-base mb-2">
+            Social Discovery & Experiences
+          </h2>
+          <h1 className="text-6xl md:text-8xl font-black leading-tight tracking-tight">
+            HAZ QUE <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BEF264] to-white">PASE.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto mt-6 font-light">
+            La app donde cualquier persona puede crear o unirse a panoramas reales en pocos clicks.
+          </p>
+          
+          <div className="mt-12 flex flex-col items-center">
+            <div className="w-16 h-1 bg-[#BEF264] mb-4"></div>
+            <p className="text-sm font-medium text-slate-400">Miguel Moreira – Founder</p>
+          </div>
+        </div>
+      </header>
+
+      {/* --- SECCIÓN 2 & 3: PROBLEMA Y OPORTUNIDAD --- */}
+      <section className="py-20 px-6 bg-slate-50">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+          
+          {/* El Problema */}
+          <div className="space-y-6">
+            <div className="inline-flex items-center space-x-2 bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+              <XCircle className="w-4 h-4" />
+              <span>El Problema</span>
+            </div>
+            <h3 className="text-4xl font-bold text-[#0D1B2A]">Conectados, pero más solos que nunca.</h3>
+            <ul className="space-y-4 text-lg text-slate-600">
+              <li className="flex items-start">
+                <span className="mr-3 mt-1 text-red-500">•</span>
+                Las redes actuales no generan encuentros reales.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 mt-1 text-red-500">•</span>
+                Coordinar con desconocidos es complejo e inseguro.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 mt-1 text-red-500">•</span>
+                <strong>La gente quiere hacer cosas… pero nadie organiza.</strong>
+              </li>
+            </ul>
+          </div>
+
+          {/* La Oportunidad */}
+          <div className="space-y-6">
+             <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+              <TrendingUp className="w-4 h-4" />
+              <span>La Oportunidad</span>
+            </div>
+            <h3 className="text-4xl font-bold text-[#0D1B2A]">El auge del Social Discovery.</h3>
+            <ul className="space-y-4 text-lg text-slate-600">
+              <li className="flex items-start">
+                <CheckCircle2 className="w-5 h-5 mr-3 mt-1 text-[#0D1B2A]" />
+                Personas de 18 a 60 buscan actividades fuera de lo digital.
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 className="w-5 h-5 mr-3 mt-1 text-[#0D1B2A]" />
+                No existe una plataforma simple para panoramas entre desconocidos.
+              </li>
+              <li className="flex items-start">
+                <CheckCircle2 className="w-5 h-5 mr-3 mt-1 text-[#0D1B2A]" />
+                Mercado amplio: vida social, deporte, cultura, ocio.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      {/* --- SECCIÓN 4 & 5: SOLUCIÓN Y COMO FUNCIONA --- */}
+      <section className="py-24 px-6 bg-[#0D1B2A] text-white">
+        <div className="max-w-6xl mx-auto text-center mb-16">
+          <h2 className="text-[#BEF264] font-bold tracking-widest uppercase mb-4">La Solución</h2>
+          <h3 className="text-5xl font-black mb-6">YOINN</h3>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Una app donde cualquier persona puede crear y unirse a panoramas reales en su ciudad, en segundos.
+            Desde jugar Catan o ir a un after office, hasta organizar una fiesta masiva.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          {[
+            { icon: <MapPin className="w-8 h-8" />, title: "Explora", desc: "Panoramas reales cerca de ti." },
+            { icon: <Calendar className="w-8 h-8" />, title: "Crea", desc: "Publica tu plan en segundos." },
+            { icon: <Users className="w-8 h-8" />, title: "Únete", desc: "Envía una solicitud para participar." },
+            { icon: <MessageCircle className="w-8 h-8" />, title: "Conecta", desc: "Chat grupal automático." }
+          ].map((step, idx) => (
+            <div key={idx} className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-[#BEF264] transition-colors text-center group">
+              <div className="bg-[#BEF264] text-[#0D1B2A] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                {step.icon}
+              </div>
+              <h4 className="text-xl font-bold mb-2">{step.title}</h4>
+              <p className="text-slate-400">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- SECCIÓN 6 & 7: VALOR Y DIFERENCIACIÓN --- */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16">
+             <h3 className="text-3xl font-bold text-[#0D1B2A] mb-8 text-center">Propuesta de Valor vs Competencia</h3>
+             <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                  <h4 className="font-bold text-slate-500 mb-2">Apps de Citas</h4>
+                  <p className="text-sm text-slate-600">Buscan 'match' romántico, no panoramas grupales reales.</p>
+                </div>
+                <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                  <h4 className="font-bold text-slate-500 mb-2">Redes Sociales (IG/TikTok)</h4>
+                  <p className="text-sm text-slate-600">Consumo de contenido, no permiten coordinar con desconocidos fácilmente.</p>
+                </div>
+                <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                  <h4 className="font-bold text-slate-500 mb-2">Timeleft / Meetup</h4>
+                  <p className="text-sm text-slate-600">Experiencias curadas o grupos rígidos, no creadas espontáneamente por usuarios.</p>
+                </div>
+             </div>
+          </div>
+
+          <div className="bg-[#BEF264] p-8 md:p-12 rounded-3xl relative overflow-hidden">
+             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between">
+                <div className="mb-6 md:mb-0">
+                  <h3 className="text-3xl md:text-4xl font-black text-[#0D1B2A] mb-2">Diferenciación YOINN</h3>
+                  <p className="text-[#0D1B2A] font-medium text-lg max-w-xl">
+                    La única plataforma centrada 100% en la <span className="underline decoration-4 decoration-white">creación social de panoramas</span> por cualquier persona. Sin fricción.
+                  </p>
+                </div>
+                <div className="flex -space-x-4">
+                  {/* Avatares simulados */}
+                  {[1,2,3,4].map(i => (
+                    <div key={i} className="w-12 h-12 rounded-full bg-[#0D1B2A] border-2 border-[#BEF264] flex items-center justify-center text-white text-xs font-bold">
+                      U{i}
+                    </div>
+                  ))}
+                  <div className="w-12 h-12 rounded-full bg-white border-2 border-[#BEF264] flex items-center justify-center text-[#0D1B2A] font-bold text-xs">
+                    +1k
+                  </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- SECCIÓN 9 & 11: MERCADO Y MODELO --- */}
+      <section className="py-20 px-6 bg-slate-50">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+           
+           {/* Mercado */}
+           <div>
+              <h3 className="text-2xl font-bold text-[#0D1B2A] mb-6 flex items-center">
+                <Target className="mr-3 text-[#0D1B2A]" /> Mercado Objetivo
+              </h3>
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <p className="text-lg text-slate-700 mb-4">Personas de <strong>18 a 60 años</strong> con ganas de hacer algo y conocer gente.</p>
+                <div className="flex flex-wrap gap-2">
+                  {['Jóvenes Adultos', 'Profesionales', 'Recién Llegados', 'Deportistas', 'Buscadores de Amistad'].map(tag => (
+                    <span key={tag} className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-medium">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+           </div>
+
+           {/* Modelo */}
+           <div>
+              <h3 className="text-2xl font-bold text-[#0D1B2A] mb-6 flex items-center">
+                <TrendingUp className="mr-3 text-[#0D1B2A]" /> Modelo de Negocio
+              </h3>
+              <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <ul className="space-y-3">
+                  <li className="flex items-center text-slate-700">
+                    <div className="w-2 h-2 bg-[#BEF264] rounded-full mr-3"></div>
+                    Comisión por eventos pagados (Ticketing).
+                  </li>
+                  <li className="flex items-center text-slate-700">
+                    <div className="w-2 h-2 bg-[#BEF264] rounded-full mr-3"></div>
+                    Suscripciones para anfitriones "Power Host".
+                  </li>
+                  <li className="flex items-center text-slate-700">
+                    <div className="w-2 h-2 bg-[#BEF264] rounded-full mr-3"></div>
+                    Promoción destacada de panoramas.
+                  </li>
+                  <li className="flex items-center text-slate-700">
+                    <div className="w-2 h-2 bg-[#BEF264] rounded-full mr-3"></div>
+                    Alianzas B2B con marcas y locales.
+                  </li>
+                </ul>
+              </div>
+           </div>
+
+        </div>
+      </section>
+
+      {/* --- SECCIÓN 10 & 12: ESTADO Y ROADMAP --- */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold text-[#0D1B2A] text-center mb-12">Roadmap & Estado Actual</h3>
+          
+          <div className="relative border-l-4 border-[#0D1B2A] ml-6 md:ml-12 space-y-12">
+            
+            {/* Estado Actual */}
+            <div className="relative pl-8">
+              <div className="absolute -left-[14px] top-0 w-6 h-6 bg-[#BEF264] border-4 border-[#0D1B2A] rounded-full"></div>
+              <h4 className="text-xl font-bold text-[#0D1B2A]">Estado Actual</h4>
+              <p className="text-slate-600 mt-2">Prototipo funcional en WebApp (React/Firebase). Primeras validaciones de usuario en curso.</p>
+            </div>
+
+            {/* Q1 */}
+            <div className="relative pl-8">
+              <div className="absolute -left-[10px] top-2 w-4 h-4 bg-slate-300 rounded-full"></div>
+              <h4 className="text-lg font-bold text-slate-800">Q1: Validación & Iteración</h4>
+              <p className="text-sm text-slate-500">Feedback loop con early adopters. Ajuste de UX/UI.</p>
+            </div>
+
+            {/* Q2 */}
+            <div className="relative pl-8">
+              <div className="absolute -left-[10px] top-2 w-4 h-4 bg-slate-300 rounded-full"></div>
+              <h4 className="text-lg font-bold text-slate-800">Q2: Launch Público</h4>
+              <p className="text-sm text-slate-500">Lanzamiento oficial. Primeras campañas de marketing digital.</p>
+            </div>
+
+             {/* Q3 */}
+             <div className="relative pl-8">
+              <div className="absolute -left-[10px] top-2 w-4 h-4 bg-slate-300 rounded-full"></div>
+              <h4 className="text-lg font-bold text-slate-800">Q3: Confianza & Seguridad</h4>
+              <p className="text-sm text-slate-500">Verificación avanzada de anfitriones (ID check). Sistema de reviews.</p>
+            </div>
+
+            {/* Q4 */}
+            <div className="relative pl-8">
+              <div className="absolute -left-[10px] top-2 w-4 h-4 bg-slate-300 rounded-full"></div>
+              <h4 className="text-lg font-bold text-slate-800">Q4: Escalamiento</h4>
+              <p className="text-sm text-slate-500">Expansión a nuevas ciudades. Lanzamiento funciones Premium.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* --- SECCIÓN 14: CIERRE / ASK --- */}
+      <footer className="py-24 px-6 bg-[#0D1B2A] text-center text-white">
+        <div className="max-w-3xl mx-auto">
+          <Rocket className="w-16 h-16 text-[#BEF264] mx-auto mb-8" />
+          <h2 className="text-4xl md:text-5xl font-black mb-8">Únete a nosotros.</h2>
+          <p className="text-xl text-slate-300 mb-10">
+            Buscamos socios estratégicos e inversión para escalar el producto, iniciar marketing agresivo y construir la app móvil nativa.
+          </p>
+          
+          <div className="inline-block p-1 bg-gradient-to-r from-[#BEF264] to-white rounded-full">
+            <a 
+              href="mailto:contacto@yoinn.cl" 
+              className="block px-8 py-4 bg-[#0D1B2A] hover:bg-[#1a2e44] text-white rounded-full font-bold text-lg transition-colors"
+            >
+              Hablemos: contacto@yoinn.cl
+            </a>
+          </div>
+
+          <div className="mt-16 pt-8 border-t border-white/10 text-slate-500 text-sm">
+            <p className="font-bold text-[#BEF264] mb-2">YOINN</p>
+            <p>Haz que pase.</p>
+            <p className="mt-4">Miguel Moreira – Founder</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default DeckLandingPage;
